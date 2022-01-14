@@ -1,3 +1,5 @@
+link 🔗 = https://forums.raspberrypi.com/viewtopic.php?t=143301
+
 import serial
 import RPi.GPIO as GPIO      
 import os, time
