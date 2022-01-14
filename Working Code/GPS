@@ -1,3 +1,5 @@
+Link 🔗 = https://www.electronicwings.com/raspberry-pi/gps-module-interfacing-with-raspberry-pi
+
 import serial               #import serial pacakge
 from time import sleep
 import webbrowser           #import package for opening link in browser
