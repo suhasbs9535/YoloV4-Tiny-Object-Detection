@@ -9,9 +9,11 @@ motor = PWMOutputDevice(14)
 
 sleep(2)
 
+
 def calculate_vibration(distance):
     vibration = (((distance - 0.02) * -1) / (4 - 0.02)) + 1
     return vibration
+    
     
 while True:
     duration = get_pulse_time()
