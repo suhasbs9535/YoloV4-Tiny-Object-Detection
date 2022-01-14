@@ -1,0 +1,20 @@
+link 🔗 = https://projects.raspberrypi.org/en/projects/see-like-a-bat/9
+
+from gpiozero import InputDevice, OutputDevice, PWMOutputDevice
+from time import sleep, time
+
+trig = OutputDevice(4)
+echo = InputDevice(17)
+motor = PWMOutputDevice(14)
+
+sleep(2)
+
+def calculate_vibration(distance):
+    vibration = (((distance - 0.02) * -1) / (4 - 0.02)) + 1
+    return vibration
+    
+while True:
+    duration = get_pulse_time()
+    distance = calculate_distance(duration)
+    vibration = calculate_vibration(distance)
+    motor.value = vibration
